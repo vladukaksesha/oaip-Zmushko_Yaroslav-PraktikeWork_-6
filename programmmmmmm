@@ -1,0 +1,37 @@
+using ConsoleApp9;
+
+
+class Program
+{
+
+    
+        static void Main()
+        {
+            NightmareAnimatronic nightmare = new NightmareAnimatronic();
+            nightmare.Name = "Фредди";
+            nightmare.Battery = 80;
+            nightmare.Room = "Кухня";
+            nightmare.ScareLevel = 9;
+            nightmare.IsInvisible = true;
+
+            Console.WriteLine("=== Работа с NightmareAnimatronic ===\n");
+
+            nightmare.Move();
+            nightmare.CheckBattery();
+            nightmare.Attack();
+            nightmare.ShowInfo();
+            nightmare.Repair();
+            nightmare.TurnOff();
+
+
+            Console.WriteLine("\n=== Через ссылку на родителя ===\n");
+
+
+            Animatronic anim = nightmare;
+
+
+            anim.Attack();
+            anim.ShowInfo();
+            anim.Repair();
+        }
+    }
