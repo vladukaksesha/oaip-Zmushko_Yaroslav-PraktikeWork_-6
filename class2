@@ -1,0 +1,37 @@
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+
+namespace ConsoleApp9
+{
+    public class NightmareAnimatronic : Animatronic
+    {
+
+        public int ScareLevel;
+        public bool IsInvisible;
+
+
+        public override void Attack()
+        {
+            Console.WriteLine(Name + " КРИЧИТ и атакует! Ужас: " + ScareLevel);
+        }
+
+        public override void ShowInfo()
+        {
+            Console.WriteLine("КОШМАРНЫЙ " + Name + " в комнате " + Room);
+        }
+
+        public new void Repair()
+        {
+            Console.WriteLine("Кошмаров не чинят!");
+        }
+
+        public new void TurnOff()
+        {
+            Console.WriteLine(Name + " невозможно выключить!");
+        }
+    }
+       
+    }
