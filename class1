@@ -1,0 +1,51 @@
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Reflection;
+using System.Text;
+using System.Threading.Tasks;
+
+namespace ConsoleApp9
+{
+    public class Animatronic
+    {
+
+        public string Name;
+        public int Battery;
+        public bool IsActive;
+        public string Room;
+
+
+        public void Move()
+        {
+            Console.WriteLine(Name + " идёт по коридору");
+        }
+
+        public void CheckBattery()
+        {
+            Console.WriteLine("Батарея: " + Battery + "%");
+        }
+
+
+        public virtual void Attack()
+        {
+            Console.WriteLine(Name + " атакует!");
+        }
+
+        public virtual void ShowInfo()
+        {
+            Console.WriteLine("Аниматроник " + Name);
+        }
+
+
+        public void Repair()
+        {
+            Console.WriteLine(Name + " на ремонте");
+        }
+
+        public void TurnOff()
+        {
+            Console.WriteLine(Name + " выключен");
+        }
+    }
+}
